@@ -2,21 +2,29 @@ var food = ['curry', 'tacos', 'burgers', 'tikka misala'];
 
     function displayGif() {
         
-        var foodValue = $(this).attr('data-name');
+        var foodValue = $(this).data(food);
         
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + foodValue + "&api_key=dc6zaTOxFJmzC&limit=10";
         
-        $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+        $.ajax({url: queryURL, method: 'GET'})
+			
+			.done(function(response){
             console.log(response);   
             
-            var imageURL = response.data.image_original_url;
-            
-            var foodImage = $("<img>");
-            
-            foodImage.attr('src', imageURL);
-            
-            $('#food-display').prepend(foodImage);
-            
+			var results = response.data;
+			console.log(results);
+			
+			for (var i=0; i < results.length; i++){
+				var gifDiv = $('<div id="gifphy">');
+				
+				var foodImg = $('<img>');
+				foodImg.attr('src', results[i].images.fixed_height.url);
+				
+				gifDiv.append(foodImg)
+				console.log(gifDiv)
+				
+				$('#gif-here').prepend(gifDiv);
+			}
         })
     }
 
@@ -45,5 +53,9 @@ var food = ['curry', 'tacos', 'burgers', 'tikka misala'];
     
     renderButtons();
     
+    $(".foodValue").on('click', function(){
+        
+        displayGif();
+    })
     
     
