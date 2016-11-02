@@ -23,7 +23,7 @@ var food = ['sushi', 'tacos', 'burgers', 'curry rice', 'fries', 'ice cream', 'pa
 		
         var mhmm = $(this).data('name');
     
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + mhmm + "&api_key=dc6zaTOxFJmzC&limit=4";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + mhmm + "&api_key=dc6zaTOxFJmzC&limit=4";
         
         $.ajax({
 			url: queryURL, 
