@@ -4,11 +4,10 @@ var food = ['curry', 'tacos', 'burgers', 'tikka misala'];
         
         var foodValue = $(this).attr('data-name');
         
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + foodValue "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + foodValue + "&api_key=dc6zaTOxFJmzC&limit=10";
         
-        $.ajax({url: queryURL; method: 'GET'}).done(function(response){
-            
-            var foodDiv = $('<div class="food">');
+        $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+            console.log(response);   
             
             var imageURL = response.data.image_original_url;
             
