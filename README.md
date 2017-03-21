@@ -11,7 +11,7 @@
  - HTML/CSS
 
 ----------
-Search for food gifs! #####[powered by Giphy API](https://github.com/Giphy/GiphyAPI)
+Search for food gifs! ##### [powered by Giphy API](https://github.com/Giphy/GiphyAPI)
 
 [Find food gifs here](https://giftasty-mhmm.herokuapp.com/)
 
