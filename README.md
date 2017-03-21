@@ -4,15 +4,18 @@
 
 
 ----------
-Search for food gifs! (powered by Giphy API)
-
-[Find food gifs here](https://giftasty-mhmm.herokuapp.com/)
-----------
-
 **Technologies**
 
  - JavaScript for using an ajax call to the Giphy API to render gifs of food onto the main body
  - jQuery for creating new elements and manipulating the DOM
  - HTML/CSS
+
+----------
+Search for food gifs! (powered by Giphy API)
+
+[Find food gifs here](https://giftasty-mhmm.herokuapp.com/)
+
+
+
 
 
